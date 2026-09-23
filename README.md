@@ -82,4 +82,4 @@ ci-scribe
 - [x] Triaje LLM `eval-triage-generator` evaluado (3 casos, baseline congelado)
 - [x] Página de evidencia regenerada y servida; `docs/metrics/evidence.html`
 - [ ] Re-baseline integrado como operación de la CLI (`--rebaseline` invoca el runbook)
-- [ ] El `eval-smoke` de todos los consumidores generado por `ci-pack.jobs` (sem. 7, dogfood)
+- [x] El `eval-smoke` de todos los consumidores generado por `ci-pack.jobs` (sem. 7, dogfood)
