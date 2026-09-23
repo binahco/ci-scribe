@@ -1,0 +1,24 @@
+# Manifest del consumidor. Contrato e inventario a la vez (ARCHITECTURE.md §2.1).
+week: 7
+name: ci-scribe
+core_version: 0.7.0
+
+reused_modules:
+  - llm-client
+  - schema-validate
+  - test-kit
+  - web-api-base
+  - ci-pack
+
+new_surface:
+  - "flota: audit (lints ci-pack + evidencia) y triaje LLM de regresiones vía HTTP"
+  - prompt eval-triage-generator (diagnóstico accionable de un eval-smoke fallido)
+  - "evals/eval-triage-generator: 3 casos, criterio schema_match en eval-triage-v1"
+  - "dogfood: el prompt de triaje nace evaluado desde el día 0 (baseline congelado)"
+  - "la página de evidencia (§10.1) sale de ci-pack; ci-scribe la sirve y audita"
+  - "bench-runner por fin con eval-smoke en CI (deuda de la sem. 5, cerrada en la 7)"
+
+estimated_new_surface: 30
+
+# Presupuesto máximo de evals en USD por semana (ARCHITECTURE.md §8.1).
+eval_budget_usd: 2.0

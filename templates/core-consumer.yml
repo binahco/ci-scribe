@@ -1,0 +1,21 @@
+# Manifest del consumidor. Contrato e inventario a la vez (ARCHITECTURE.md §2.1).
+# Copiar a la raíz del repo semanal y completar.
+week: 14
+name: contract-reviewer
+core_version: 1.3.0
+
+reused_modules:
+  - llm-client
+  - schema-validate
+  - prompt-registry
+  - web-api-base
+  - test-kit
+
+new_surface:
+  - multi-tenant contract workspace
+  - clause versioning
+
+estimated_new_surface: 25
+
+# Presupuesto máximo de evals en USD por semana (ARCHITECTURE.md §8.1).
+eval_budget_usd: 2.0

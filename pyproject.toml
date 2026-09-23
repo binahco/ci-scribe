@@ -1,0 +1,25 @@
+[project]
+name = "ci-scribe"
+version = "0.1.0"
+description = "Fleet ops de la flota llm-dev-core: lints ci-pack, evals en replay y página de evidencia; triaje LLM de regresiones."
+requires-python = ">=3.12"
+dependencies = [
+    "llm-dev-core",
+    "PyYAML>=6.0,<7",
+]
+
+[tool.uv.sources]
+llm-dev-core = { path = "../llm-dev-core", editable = true }
+
+[project.scripts]
+ci-scribe = "ci_scribe.main:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ci_scribe"]
+
+[dependency-groups]
+dev = ["pytest>=8,<9"]

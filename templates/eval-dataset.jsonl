@@ -1,0 +1,1 @@
+{"prompt_id": "commit-message-generator", "prompt_version": "0.1.0", "input": {"diff": "…"}, "expected": "feat: add retry with backoff", "criteria": {"type": "deterministic_match", "note": "Umbral y criterio definidos en test-kit (sem. 5)"}}
